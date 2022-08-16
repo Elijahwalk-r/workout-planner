@@ -1,35 +1,44 @@
 const FormDropdown = () => {
-
-
     return(
-        <form>
-            <label>Upper Body</label>
-            <select>
-                <option>Bench Press</option>
-                <option>Barbell Row</option>
-            </select>
+        <section>
+            <div className="wrapper">
+                <h2 className="exerciseTitle">Choose Your Exercise</h2>
+                <form className="exerciseFormDropdown">
+                    <div className="formFlexChild1">
+                        <label className="exerciseLabel">Upper Body</label>
+                        <select>
+                            <option>Bench Press</option>
+                            <option>Barbell Row</option>
+                        </select>
+                    </div>
 
-            <label>Lower Body</label>
-            <select>
-                <option>Squat</option>
-                <option>forward lunge</option>
-            </select>
+                    <div className="formFlexChild2">
+                        <label className="exerciseLabel">Lower Body</label>
+                        <select>
+                            <option>Squat</option>
+                            <option>forward lunge</option>
+                        </select>
+                    </div>
 
-            <label>Core</label>
-            <select>
-                <option>crunches</option>
-                <option>plank</option>
-            </select>
+                    <div className="formFlexChild3">
+                        <label className="exerciseLabel">Core</label>
+                        <select>
+                            <option>crunches</option>
+                            <option>plank</option>
+                        </select>
+                    </div>
 
-            <label>Conditioning</label>
-            <select>
-                <option>sprints</option>
-                <option>jog</option>
-            </select>
-
-        </form>
+                    <div className="formFlexChild4">
+                        <label className="exerciseLabel">Conditioning</label>
+                        <select>
+                            <option>sprints</option>
+                            <option>jog</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </section>
     )
-
 }    
 
 

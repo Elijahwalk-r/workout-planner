@@ -1,3 +1,272 @@
+/* SET UP SNIPPET START */
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%
+}
+
+body {
+  margin: 0
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0
+}
+
+figcaption,
+figure,
+main {
+  display: block
+}
+
+figure {
+  margin: 1em 40px
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted
+}
+
+b,
+strong {
+  font-weight: inherit
+}
+
+b,
+strong {
+  font-weight: bolder
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em
+}
+
+dfn {
+  font-style: italic
+}
+
+mark {
+  background-color: #ff0;
+  color: #000
+}
+
+small {
+  font-size: 80%
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline
+}
+
+sub {
+  bottom: -.25em
+}
+
+sup {
+  top: -.5em
+}
+
+audio,
+video {
+  display: inline-block
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0
+}
+
+img {
+  border-style: none
+}
+
+svg:not(:root) {
+  overflow: hidden
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0
+}
+
+button,
+input {
+  overflow: visible
+}
+
+button,
+select {
+  text-transform: none
+}
+
+button,
+html [type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText
+}
+
+fieldset {
+  padding: .35em .75em .625em
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline
+}
+
+textarea {
+  overflow: auto
+}
+
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px
+}
+
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit
+}
+
+details,
+menu {
+  display: block
+}
+
+summary {
+  display: list-item
+}
+
+canvas {
+  display: inline-block
+}
+
+template {
+  display: none
+}
+
+[hidden] {
+  display: none
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: '';
+  clear: both;
+  height: 0;
+}
+
+html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* SETUP SNIPPET END */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,7 +280,195 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* TYPOGRAPHY STYLES START */
+html {
+  font-size: 125%;
+}
 
 body{
-  background-color: rgb(164, 121, 28);
+  background-color: black;
+  color: white;
+  font-size: 0.9rem;
 }
+
+h1,
+h2,
+img,
+ul,
+li,
+a,
+input,
+label,
+select,
+option {
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+  color: gold;
+}
+
+ul{
+  list-style: none;
+}
+
+h1{
+  font-size: 3rem;
+}
+h2{
+  font-size: 2rem;
+}
+
+p, li, a, option, label{
+  letter-spacing: 0.7px;
+  line-height: 30px;
+}
+/* TYPOGRAPHY STYLES END */
+
+/* BASE STYLES START */
+.wrapper{
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+button {
+  background-color: gold;
+  padding: 10px;
+  border: 1px groove goldenrod;
+  border-radius: 5%;
+  cursor: pointer;
+  color: black;
+}
+
+button:hover,
+:focus {
+  background-color: #000;
+  color: white;
+  border: 1px solid gold;
+}
+
+input:hover,:focus{
+  background-color: white;
+  border: none;
+  color: black;
+}
+
+section{
+  margin-bottom: 50px;
+}
+
+main{
+  margin-top: 50px;
+}
+/* BASE STYLES END */
+
+/* HEADER STYLES START */
+header{
+  height: 30vh;
+}
+header .wrapper{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  background-image: radial-gradient(circle, rgba(255, 241, 0, 1) 0%, rgba(0, 0, 0, 1) 50%);
+}
+
+/* HEADER STYLES END */
+
+/* Description / API Section STYLES START */
+.descriptionSection{
+  display: flex;
+  justify-content: space-between;
+}
+
+.descriptionFlexParent,
+.apiFlexParent{
+  margin: 0px 20px;
+  padding: 10px;
+  text-align: center;
+  width: 50%;
+}
+/* Description / API Section STYLES END */
+
+/* SELECT FORM STYLES START */
+.exerciseFormDropdown{
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.formFlexChild1,
+.formFlexChild2,
+.formFlexChild3,
+.formFlexChild4{
+  margin: 0px 40px;
+  width: calc((100% / 4) - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.exerciseLabel{
+  width: 100%;
+  margin-bottom: 5px;
+}
+select{
+  width: 100%;
+  padding: 5px;
+}
+option{
+  padding: 10px;
+}
+
+.exerciseTitle{
+  text-align: center;
+}
+/* SELECT FORM STYLES END */
+
+/* ADD EXERCISE FORM STYLES START */
+.addLiftForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addLiftInput{
+  margin: 10px 0;
+  padding: 10px;
+}
+/* ADD EXERCISE FORM STYLES END */
+
+/* GET EXERCISE STYLES START */
+  ul{
+    margin: 0 auto;
+    width: 60%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    box-shadow: -10px 10px 15px goldenrod;
+  }
+
+  .liftListItem{
+    width: calc(100% / 4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .removeButton{
+    padding: 0;
+    height: fit-content;
+    margin-left:10px ;
+  }
+/* GET EXERCISE STYLES END */
+
+/* Footer Styles START */
+
+/* Footer Styles END */

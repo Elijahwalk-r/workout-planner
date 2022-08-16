@@ -19,13 +19,15 @@ const AddExercise = () => {
     }
 
 return(
-    <div>
-        <form action="submit">
-            <label htmlFor="exerciseChosen">Add an exercise to your Workout</label>
-            <input type="text" id="addedExercise" onChange={handleInputChange} value={userInput}/>
-            <button onClick={handleSubmit}>Choose an Exercise</button>
-        </form>
-    </div>
+    <section>
+        <div className="wrapper">
+            <form action="submit" className="addLiftForm">
+                <label htmlFor="exerciseChosen">Add an exercise to your Workout</label>
+                <input type="text" id="addedExercise" onChange={handleInputChange} value={userInput} className="addLiftInput"/>
+                <button onClick={handleSubmit}>Choose an Exercise</button>
+            </form>
+        </div>
+    </section>
 )
 }
 

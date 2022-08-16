@@ -1,7 +1,9 @@
 const Footer = () => {
     return(
         <footer>
-            <p>Made at <a href="https://junocollege.com/" target="_blank" rel="noopener">Juno College of Technology</a></p>
+            <div className="wrapper">
+                <p>Made at <a href="https://junocollege.com/" target="_blank" rel="noopener">Juno College of Technology</a></p>
+            </div>
         </footer>
     )
 }

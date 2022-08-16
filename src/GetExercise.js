@@ -23,18 +23,20 @@ const GetExercise = () => {
         remove(dbRef)
     }
     return(
-        <div>
-            <ul>
-                {exercise.map((lift) => {
-                    return(
-                        <li key={lift.key}>
-                            <p>{lift.name}</p>
-                            <button onClick={() => handleRemoveExercise(lift.key)}>X</button>
-                        </li>
-                    )
-                })}
-            </ul>
-        </div>
+        <section>
+            <div className="wrapper">
+                <ul>
+                    {exercise.map((lift) => {
+                        return(
+                            <li className="liftListItem" key={lift.key}>
+                                <p>{lift.name}</p>
+                                <button className="removeButton" onClick={() => handleRemoveExercise(lift.key)}>X</button>
+                            </li>
+                        )
+                    })}
+                </ul>
+            </div>
+        </section>
     )
 }
 

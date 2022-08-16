@@ -1,26 +1,26 @@
-import firebase from './firebase';
-import { getDatabase, ref, onValue, remove } from 'firebase/database';
-import { useEffect, useState } from 'react';
+// import firebase from './firebase';
+// import { getDatabase, ref, onValue, remove } from 'firebase/database';
+// import { useEffect, useState } from 'react';
 
 
-const WorkoutSelected = () => {
+// const WorkoutSelected = () => {
     
-    const [workout, setWorkout] = useState([]);
-    const handleAddWorkout = () =>{
+//     const [workout, setWorkout] = useState([]);
+//     const handleAddWorkout = () =>{
         
-        useEffect(() => {
-            const database = getDatabase(firebase);
-            const dbRef = ref(database);
-            onValue(dbRef, (res) => {
-                const workoutArray = [];
-                const data = res.val();
-                for (let key in data) {
-                    workoutArray.push({ key: key, name: data[key] });
-                }
-                setWorkout(workoutArray);
-            })
-        }, [])
-    }
+//         useEffect(() => {
+//             const database = getDatabase(firebase);
+//             const dbRef = ref(database);
+//             onValue(dbRef, (res) => {
+//                 const workoutArray = [];
+//                 const data = res.val();
+//                 for (let key in data) {
+//                     workoutArray.push({ key: key, name: data[key] });
+//                 }
+//                 setWorkout(workoutArray);
+//             })
+//         }, [])
+//     }
 
     // const handleRemoveExercise = (workId) => {
     //     const database = getDatabase(firebase)
@@ -37,9 +37,9 @@ const WorkoutSelected = () => {
 
     // }
 
-    return(
-        <button onClick={handleAddWorkout()}>Create Workout</button>
-    )
+    // return(
+    //     <button onClick={handleAddWorkout()}>Create Workout</button>
+    // )
 
     // return(
     //     <div>
@@ -58,5 +58,5 @@ const WorkoutSelected = () => {
     //         </ul>
     //     </div>
     // )
-}
-export default WorkoutSelected;
+// }
+// export default WorkoutSelected;
