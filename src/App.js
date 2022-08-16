@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className="App">
-<<<<<<< HEAD
+
       <h1>My Workout Planner Main site</h1>
       <Explanation />
       <FormDropdown />
@@ -40,11 +40,10 @@ function App() {
       <GetExercise />
       <WorkoutSelected />
       <Footer />
-=======
+
       <h1>My Workout Planner</h1>
       <h2>Production Branch</h2>
    
->>>>>>> a21d1a9f3e8140ca51ed07db581558801a3fd7cd
     </div>
   );
 }
