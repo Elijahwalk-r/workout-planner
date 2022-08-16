@@ -309,6 +309,10 @@ a{
   text-decoration: none;
   color: gold;
 }
+a:hover,:focus{
+  color: goldenrod;
+  text-decoration: underline;
+}
 
 ul{
   list-style: none;
@@ -472,3 +476,53 @@ option{
 /* Footer Styles START */
 
 /* Footer Styles END */
+
+@media (max-width: 950px) {
+  .descriptionSection {
+    flex-direction: column;
+    align-items: center;
+  }
+  .descriptionFlexParent,
+  .apiFlexParent {
+    width: 100%;
+  }
+
+  .exerciseFormDropdown {
+    height: fit-content;
+    flex-wrap: wrap;
+  }
+  
+  .formFlexChild1,
+  .formFlexChild2,
+  .formFlexChild3,
+  .formFlexChild4 {
+    width: calc((100% / 2) - 80px);
+    margin-bottom: 30px;
+  }
+
+  .liftListItem {
+    width: calc(100% / 2);
+  }
+}
+
+@media (max-width: 665px) {
+  header .wrapper {
+    align-items: center;
+  }
+
+  .liftListItem {
+    width: calc(100%);
+  }
+
+  .formFlexChild1,
+  .formFlexChild2,
+  .formFlexChild3,
+  .formFlexChild4 {
+    width: calc((100%) - 80px);
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 360px) {
+
+}

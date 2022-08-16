@@ -2,7 +2,8 @@ const Footer = () => {
     return(
         <footer>
             <div className="wrapper">
-                <p>Made at <a href="https://junocollege.com/" target="_blank" rel="noopener">Juno College of Technology</a></p>
+                <p>Made at <a href="https://junocollege.com/" target="_blank" rel="noopener">Juno College of Technology</a> | Data Courtesy of <a href="https://api.goprogram.ai/inspiration" target="_blank" rel="noopener">Inspiration API</a></p>
+
             </div>
         </footer>
     )
