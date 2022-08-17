@@ -17,16 +17,21 @@ function App() {
       url: "https://api.goprogram.ai/inspiration",
       method: "GET",
       dataResponse: "json"
+    }).then((response) => {
+      const errorHandle = response.request.statusText;
+      if (errorHandle === "OK") {
+        const actualQuote = Object.values(response.data);
+        setQuote(actualQuote)
+      } else {
+        throw new Error(errorHandle)
+      }
+    }).catch((err) => {
+      if (err.message !== "OK") {
+        alert("Something went wrong with the API Quote, sorry for the inconvenience!")
+      }
     })
-    .then((response) =>{
-      const actualQuote = Object.values(response.data);
-      setQuote(actualQuote); 
-    })
-    console.log()
-    // .catch((err) => {
-    //  alert("Something went wrong with the API Quote, sorry for the inconvenience!",err)
-    // });
   }, [])
+    
   
   return (
     <div className="App">
