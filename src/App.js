@@ -25,7 +25,7 @@ function App() {
         throw new Error(errorHandle)
       }
     }).catch((err) => {
-      if (err.message != "OK"){
+      if (err.message !== "OK"){
         alert("Something went wrong, sorry for the inconvenience!")
       }
     })
