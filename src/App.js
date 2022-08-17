@@ -26,7 +26,7 @@ function App() {
       }
     }).catch((err) => {
       if (err.message !== "OK"){
-        alert("Something went wrong, sorry for the inconvenience!")
+        alert("Something went wrong with the API Quote, sorry for the inconvenience!")
       }
     })
   }, [])
