@@ -8,7 +8,6 @@ import Footer from './Footer';
 import GetExercise from './GetExercise';
 import AddExercise from './AddExercise';
 import FormDropdown from './FormDropdown';
-// import WorkoutSelected from './WorkoutSelected';
 
 function App() {
   const [quote, setQuote] = useState([])
@@ -48,8 +47,6 @@ function App() {
         <AddExercise />
 
         <GetExercise />
-
-        {/* <WorkoutSelected /> */}
 
       </main>
 

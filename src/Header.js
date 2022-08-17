@@ -3,7 +3,7 @@ const Header = () => {
         <header>
             <div className="wrapper">
                 <h1>Workout Planner</h1>
-                <p>Get Fit with <span>Quick</span> and <span>Easy</span> Exercises
+                <p>Get Fit with <span className="exclamation">Quick</span> and <span className="exclamation">Easy</span> Exercises
                 </p>
             </div>
         </header>

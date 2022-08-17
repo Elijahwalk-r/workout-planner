@@ -26,8 +26,9 @@
 //user can remove the exercise they chose
 
         // results component //
-//component to display chosen exercises from firebase using props method
+//component to display chosen exercises from firebase 
 
+        // STRETCH GOAL TO SAVE A WORKOUT FOR LATER
 // user will then save the total exercises and will be loaded into a separate div with ul li. 
         // APP PSEUDO CODE END
 
