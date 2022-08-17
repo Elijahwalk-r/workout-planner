@@ -22,9 +22,10 @@ function App() {
       const actualQuote = Object.values(response.data);
       setQuote(actualQuote); 
     })
-    .catch((err) => {
-     alert("Something went wrong with the API Quote, sorry for the inconvenience!",err)
-    });
+    console.log()
+    // .catch((err) => {
+    //  alert("Something went wrong with the API Quote, sorry for the inconvenience!",err)
+    // });
   }, [])
   
   return (

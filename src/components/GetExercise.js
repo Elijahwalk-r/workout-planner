@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getDatabase, ref, onValue, remove } from 'firebase/database';
-import firebase from './firebase';
+import firebase from '../firebase';
 
 const GetExercise = () => {
     const [exercise, setExercise] = useState([]);
