@@ -17,18 +17,17 @@ function App() {
       method: "GET",
       dataResponse: "json"
     }).then((response) =>{
+      const errorHandle = response.request.statusText;
+      if(errorHandle === "OK"){
         const actualQuote = Object.values(response.data);
-      setQuote(actualQuote) 
-      // const errorHandle = response.request.statusText;
-      // if(errorHandle === "OK"){
-      // } 
-    //   else {
-    //     throw new Error(errorHandle)
-    //   }
-    // }).catch((err) => {
-    //   if (err.message !== "OK"){
-    //     alert("Something went wrong with the API Quote, sorry for the inconvenience!")
-    //   }
+        setQuote(actualQuote) 
+      } else {
+        throw new Error(errorHandle)
+      }
+    }).catch((err) => {
+      if (err.message !== "OK"){
+        alert("Something went wrong with the API Quote, sorry for the inconvenience!")
+      }
     })
   }, [])
   
