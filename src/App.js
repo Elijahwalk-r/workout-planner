@@ -1,7 +1,7 @@
 import './App.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import Header from './Header';
+import Header from './components/Header';
 import Explanation from './components/Explanation';
 import ApiData from './components/ApiData';
 import Footer from './components/Footer';
