@@ -9,6 +9,7 @@ import GetExercise from './GetExercise';
 import AddExercise from './AddExercise';
 import FormDropdown from './FormDropdown';
 
+
 function App() {
   const [quote, setQuote] = useState([])
   useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
   
   return (
     <div className="App">
+
       <Header />
       <main>
         <section>
@@ -51,6 +53,9 @@ function App() {
       </main>
 
       <Footer />
+
+   
+
     </div>
   );
 }
