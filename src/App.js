@@ -25,7 +25,7 @@ function App() {
         throw new Error(errorHandle)
       }
     }).catch((err) => {
-      if (err.message !== "OK"){
+      if (err.message === "Not Found"){
         alert("Something went wrong with the API Quote, sorry for the inconvenience!")
       }
     })
