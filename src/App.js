@@ -14,7 +14,7 @@ function App() {
   const [quote, setQuote] = useState([])
   useEffect(() => {
     axios({
-      url: "https:/api.goprogram.ai/inspiration",
+      url: "https://api.goprogram.ai/inspiration",
       method: "GET",
       dataResponse: "json"
     })
