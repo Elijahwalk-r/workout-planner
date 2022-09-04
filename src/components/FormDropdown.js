@@ -6,7 +6,7 @@ const FormDropdown = () => {
                 <form className="exerciseFormDropdown" action="">
                     <div className="formFlexChild1">
                         <label className="exerciseLabel" htmlFor="upperBody">Upper Body</label>
-                        <select name="upperBody" id="upperbody">
+                        <select name="upperBody" id="upperBody">
                             <option value="chest">Bench Press</option>
                             <option value="back">Dumbell Rows</option>
                             <option value="shoulder">Dumbell Seated Press</option>
