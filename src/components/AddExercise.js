@@ -23,7 +23,7 @@ return(
         <div className="wrapper">
             <form action="submit" className="addLiftForm">
                 <label htmlFor="exerciseChosen">Add an exercise to create your Workout</label>
-                <input type="text" id="exerciseChosen" onChange={handleInputChange} value={userInput} className="addLiftInput" name="exercise" placeholder="Enter Your Exercise" maxlength="24" required="true"/>
+                <input type="text" id="exerciseChosen" onChange={handleInputChange} value={userInput} className="addLiftInput" name="exercise" placeholder="Enter Your Exercise" maxLength="24" required={true}/>
                 <button onClick={handleSubmit}>Choose an Exercise</button>
             </form>
         </div>
