@@ -326,6 +326,7 @@ h1{
 }
 h2{
   font-size: 1.5rem;
+  font-weight: 800;
 }
 
 p, li, a, option, label{
@@ -375,7 +376,7 @@ main{
 
 /* HEADER STYLES START */
 header{
-  height: 40vh;
+  height: 30vh;
 }
 header .wrapper{
   display: flex;
@@ -389,6 +390,76 @@ header .wrapper{
 }
 
 /* HEADER STYLES END */
+
+/* SIGN IN/UP COMPONENT STYLES START */
+.signInCard{
+  border: 1px solid #1D2D44;
+  background-color: #3e5c76;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 25px;
+  max-width: 700px;
+}
+
+.imageContainer{
+  max-width: 800px;
+  margin:0 auto;
+  display: flex;
+  justify-content: center;
+}
+.backgroundImage{
+  position: absolute;
+  top:500px;
+  z-index: -10;
+  width: auto;
+  max-width:90%;
+}
+
+.ecgContainer{
+  max-width: 200px;
+  margin:0 auto;
+}
+
+.ecgSprint{
+  width:100%;
+}
+
+/* SIGN IN/UP COMPONENT STYLES END*/
+
+/* FORM / INPUT STYLES START */
+form{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+fieldset{
+  border: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+}
+
+.signIn{
+  height: 50px;
+  margin-bottom: 20px;
+  padding:10px;
+  border-radius: 10px;
+}
+
+.signInButton{
+  border-radius: 10px;
+  height: 50px;
+}
+
+.anonymous::before,
+.anonymous::after{
+  content: " | ";
+}
+
+/* FORM / INPUT STYLES END */
 
 /* Description / API Section STYLES START */
 .descriptionSection{
@@ -505,6 +576,9 @@ option{
 
 /* Media Queries START */
 @media (max-width: 950px) {
+  .backgroundImage{
+    top:600px;
+  }
   .descriptionSection {
     flex-direction: column;
     align-items: center;
@@ -533,9 +607,23 @@ option{
   }
 }
 
-@media (max-width: 665px) {
-  header .wrapper {
-    align-items: center;
+@media (max-width: 700px) {
+
+   h1{
+    font-size: 2rem ;
+   } 
+  .headerContainer {
+   text-align: center;
+  }
+
+  .backgroundImage{
+    display: none;
+  }
+
+
+  .lineBreak::before{
+    content: "\a";
+    white-space: pre;
   }
 
   .liftListItem {
