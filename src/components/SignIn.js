@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import fitnesscentre from "../assets/fitnesscentre.png"
+import fitnessCentre from "../assets/fitnesscentre.png"
 import Header from "./Header";
 import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../contexts/AuthContext";
+import AnonymousSignIn from "./AnonymousSignIn";
+
+
 
 
 const SignIn = () => {
-    const pic1 = fitnesscentre;
+    const pic1 = fitnessCentre;
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
@@ -22,9 +25,10 @@ const SignIn = () => {
             navigate("/account")
         } catch (e){
             setError(e.message)
-            console.log(e.message)
         }
     }
+    
+
     return(
         <>
             <Header />
@@ -70,8 +74,8 @@ const SignIn = () => {
                             <p>Don't have an account yet? <Link to="/signup" className="exclamation lineBreak"> Sign up</Link></p>
 
                             <p className="anonymous">Or, continue without signing in</p>
-                                                      
-                            <p>Click <Link to="main" className="exclamation">HERE</Link> </p>
+                            
+                            <AnonymousSignIn />
                             
                         </div>
                     </div>

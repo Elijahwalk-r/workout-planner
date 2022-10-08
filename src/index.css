@@ -374,6 +374,49 @@ main{
 
 /* BASE STYLES END */
 
+/* NAV BAR STYLES START */
+.navBarContainer{
+  display: flex;
+  justify-content: flex-end;
+  width:100%;
+}
+.navBarUl{
+  margin: 20px 0;
+  border: 1px solid red;
+  width: 50%;
+  text-align: right;
+}
+.navlist{
+  border: 1px solid red;
+}
+.linkToAccount{
+ border: 1px solid red;
+
+}
+
+/* NAV BAR STYLES END */
+
+/* ACCOUNT PAGE STYLES START */
+.accountPage{
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logOutButton{
+  border: 1px solid red;
+}
+.heartWeight{
+  width: 100%
+}
+
+.heartWeightContainer{
+    max-width: 400px;
+    align-self: flex-end;
+}
+/* ACCOUNT PAGE STYLES END */
+
 /* HEADER STYLES START */
 header{
   height: 30vh;
@@ -544,7 +587,7 @@ option{
 /* ADD EXERCISE FORM STYLES END */
 
 /* GET EXERCISE STYLES START */
-  ul{
+  .workoutCard{
     margin: 0 auto;
     width: 60%;
     height: fit-content;

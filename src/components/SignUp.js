@@ -3,6 +3,7 @@ import healthyrun from "../assets/healthyrun.png";
 import Header from './Header';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../contexts/AuthContext';
+import AnonymousSignIn from "./AnonymousSignIn";
 
 const SignUp = () => {
     const pic2 = healthyrun;
@@ -23,7 +24,6 @@ const SignUp = () => {
             navigate('/account')
         } catch (e){
             setError(e.message)
-            console.log(e.message)
         }
     }
 
@@ -82,9 +82,12 @@ const SignUp = () => {
                                 <button type="submit" className="signInButton">Sign Up</button>
                             </fieldset>
                         </form>
+                        
                         <div>
-                            <p>Click <Link to="main" className="exclamation">HERE</Link> to Continue to the Application without signing in.</p>
+                            <p> To use this App without signing in, Click Below.</p>
+                            <AnonymousSignIn />
                         </div>
+
                         <div className="ecgContainer">
                             <img className="ecgSprint"src={pic2} alt="An image of a person running at the end of an ECG lifeline monitor reading"/>
                         </div>

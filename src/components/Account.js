@@ -1,11 +1,12 @@
 import React from "react";
-import NavBar from "./NavBar";
+import heartWeight from "../assets/heartweights.png"
 import Header from "./Header";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { UserAuth } from "../contexts/AuthContext";
 
 
 const Account = () => {
+    const pic3 = heartWeight;
     const { user, logOut } = UserAuth();
     const navigate = useNavigate();
 
@@ -15,19 +16,39 @@ const Account = () => {
             navigate("/");
             console.log("You are logged out")
         } catch(e){
-            console.log(e.message)
+            // console.log(e.message)
+            alert(e.message)
         }
     }
 return(
     <>
-        {/* <NavBar /> */}
         <Header />
-        <div>
-            <h1>Account</h1>
-            <p>User Email: {user && user.email}</p>
+        <section>
+            <div className=" wrapper accountPage">
+                <div>
+                    <Link to="/main">HERE</Link>
+                    <h1>Private Account Page</h1>
+                    <p>User Email: {user && user.email}</p>
+                </div>
+                <div className="logOutButton">
+                    <button onClick={handleLogOut}>Log Out</button>
+                </div>
+                    
+                    {/* WILL USE THIS DIV TO MAP AND RETURN THE LOGGED IN USERS PRIVATE LIST FROM FIREBASE*/}
+                <div className="privateWorkoutList">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
 
-            <button onClick={handleLogOut}>Log Out</button>
-        </div>
+                <div className="heartWeightContainer">
+                    <img className="heartWeight"src={pic3} alt="A heart lifting two dumbbells"/>
+                </div>
+            </div>
+        </section>
     </>
 )
 }

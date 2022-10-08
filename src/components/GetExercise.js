@@ -1,8 +1,20 @@
 import { useEffect, useState } from 'react';
 import { getDatabase, ref, onValue, remove } from 'firebase/database';
 import firebase from '../firebase';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 const GetExercise = () => {
+    const auth = getAuth();
+
+    onAuthStateChanged(auth, (user) => {
+        if (user){
+            const uid = user.uid;
+            console.log("hey")
+        } else {
+            console.log("bye")
+        }
+    })
+
     const [exercise, setExercise] = useState([]);
     useEffect(() => {
         const database = getDatabase(firebase);
