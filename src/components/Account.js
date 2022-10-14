@@ -1,54 +1,93 @@
-import React from "react";
-import heartWeight from "../assets/heartweights.png"
+import React, { useState } from "react";
 import Header from "./Header";
-import { useNavigate, Link } from "react-router-dom";
+import LogOut from "./LogOut";
+import Footer from "./Footer";
+import { Link } from "react-router-dom";
 import { UserAuth } from "../contexts/AuthContext";
+// import GetWorkoutSavedList from "./GetWorkoutSavedList";
 
 
 const Account = () => {
-    const pic3 = heartWeight;
-    const { user, logOut } = UserAuth();
-    const navigate = useNavigate();
+    // grabbing user authentication from context use in order to show user details
+    const { user } = UserAuth();
 
-    const handleLogOut = async () => {
-        try{
-            await logOut();
-            navigate("/");
-            console.log("You are logged out")
-        } catch(e){
-            // console.log(e.message)
-            alert(e.message)
-        }
+    // use of states to toggle between classes and element text
+    const [workoutCard, setWorkoutCard] = useState(false);
+    const [buttonText, setButtonText] = useState(true);
+    const [exerciseList, setExerciseList] = useState(false)
+
+    // named function to handle submit
+    const handleShown = e => {
+        e.preventDefault();
+        setWorkoutCard(!workoutCard); 
+        setButtonText(!buttonText);
+        setExerciseList(!exerciseList);
     }
+
+    // variables that can be changed using conditional rendering (ternary operators)
+    let toggleWorkoutCard = workoutCard ? "workoutItemExpand" : "workoutItem";
+    let toggleButtonText = buttonText ? "Show Workout" : "Hide Workout";
+    let toggleExerciseClass = exerciseList ? "showExerciseList" : "hideExerciseList" ;
+    // const navigate = useNavigate();
+
 return(
     <>
-        <Header />
-        <section>
-            <div className=" wrapper accountPage">
-                <div>
-                    <Link to="/main">HERE</Link>
-                    <h1>Private Account Page</h1>
-                    <p>User Email: {user && user.email}</p>
-                </div>
-                <div className="logOutButton">
-                    <button onClick={handleLogOut}>Log Out</button>
-                </div>
-                    
-                    {/* WILL USE THIS DIV TO MAP AND RETURN THE LOGGED IN USERS PRIVATE LIST FROM FIREBASE*/}
-                <div className="privateWorkoutList">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
+        <nav>
+            <div className="wrapper navBarContainer">
+                <ul className="navBarUl">
+                    <li>
+                        <p className="linkToAccount">
+                            <Link to="/main">Get Started</Link>
+                        </p>
+                    </li>
+                    <li className="navList">
+                        <p className="currentUser">
+                            <span>User Email </span> 
+                            <span>{user && user.email}</span>
+                        
+                        </p>
+                    </li>
+                    <li>
+                        <LogOut />
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-                <div className="heartWeightContainer">
-                    <img className="heartWeight"src={pic3} alt="A heart lifting two dumbbells"/>
+        <Header />
+
+        <header>
+            <div className="wrapper accountPageTitle">
+                <h2>Private Account Page</h2>
+                <h3>View Your Saved Workouts</h3>
+            </div>
+        </header>
+        
+        <section>
+            <div className="wrapper">
+                <div className="accountPage">
+                        {/* WILL USE THIS DIV TO MAP AND RETURN THE LOGGED IN USERS PRIVATE LIST FROM FIREBASE*/}
+                    <div className={toggleWorkoutCard}>
+
+                        <p>title of workout</p>
+
+                        <button 
+                            type="submit" 
+                            onClick={handleShown}
+                            >{toggleButtonText}
+                        </button>
+                        
+                        <a>go to random youtube vid</a>
+                        
+                        <ul className={toggleExerciseClass}>
+                            {/* <GetWorkoutSavedList/> */}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <Footer />
     </>
 )
 }

@@ -1,0 +1,43 @@
+@import './variablesMixins';
+
+/* #region NAV BAR STYLES START */
+
+.navBarContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.navBarUl {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 20px 0;
+    width: 50%;
+    // text-align: right;
+}
+
+.navList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    .currentUser{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        span:first-of-type{
+            border-bottom: 1px solid gold;
+        }
+    }
+}
+
+.mainLogOut{
+    @include logOutButton
+}
+
+.linkToAccount {
+    @include navLinks
+}
+/* #endregion NAV BAR STYLES END */

@@ -5,30 +5,35 @@ import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../contexts/AuthContext";
 import AnonymousSignIn from "./AnonymousSignIn";
 
-
-
-
 const SignIn = () => {
-    const pic1 = fitnessCentre;
+    // Global Variables / States
+    
+    // states holding users sign in credentials (email, password) as well as error messages
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
 
+    // useNavigate to render new component (account page)
     const navigate = useNavigate();
+
+    // log in variables taken from context provider
     const { logIn } = UserAuth();
 
+    // variable to hold imported img
+    const pic1 = fitnessCentre;
+
+    // Sign in async function to navigate to user account page on submit
     const handleSignInSubmit = async (e) => {
         e.preventDefault();
         setError("")
         try{
             await logIn(email, password);
-            navigate("/account")
+            navigate("/account");    
         } catch (e){
             setError(e.message)
         }
     }
     
-
     return(
         <>
             <Header />

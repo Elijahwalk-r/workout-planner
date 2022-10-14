@@ -1,0 +1,106 @@
+/* #region Media Queries START */
+@media (max-width: 950px) {
+    .backgroundImage {
+        top: 600px;
+    }
+
+    .navBarContainer{ 
+        .navBarUl{
+            width: 100%;
+            padding: 10px;
+            justify-content: center;
+        }
+    }
+
+    .descriptionSection {
+        flex-direction: column-reverse;
+        width: 100%;
+        align-items: baseline;
+        justify-content: baseline;
+        .descriptionFlexParent,
+        .apiFlexParent {
+            width: 90%;
+            margin-bottom: 20px;
+        }
+    }
+
+
+    .exerciseFormDropdown {
+        height: fit-content;
+        flex-wrap: wrap;
+    }
+
+    .formFlexChild1,
+    .formFlexChild2,
+    .formFlexChild3,
+    .formFlexChild4 {
+        width: calc((100% / 2) - 80px);
+        margin-bottom: 30px;
+    }
+
+    .workoutCard{
+        .liftListItem {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    
+    .navBarContainer {
+        .navBarUl {
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            .linkToAccount, .mainLogOut{
+                margin: 0;
+            }
+            .navList{            
+                flex-direction: column;
+            }
+        }
+    }
+
+    .mainLogOut{
+        margin: 0;
+    }
+       
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .headerContainer {
+        text-align: center;
+    }
+
+    .backgroundImage {
+        display: none;
+    }
+
+    .lineBreak::before {
+        content: "\a";
+        white-space: pre;
+    }
+    
+    .exerciseContainer{
+        padding: 20px 10px;
+        box-shadow: -5px 10px 8px #000000;
+        border-radius: 40px;
+        .workoutCard {
+            width: 90%;
+        }
+    }
+
+    .formFlexChild1,
+    .formFlexChild2,
+    .formFlexChild3,
+    .formFlexChild4 {
+        width: calc((100%) - 80px);
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 360px) {}
+
+/* #endregion MEDIA QUERIES END */

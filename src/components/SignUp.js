@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import healthyrun from "../assets/healthyrun.png";
+import healthyRun from "../assets/healthyrun.png";
 import Header from './Header';
+import Footer from "./Footer";
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../contexts/AuthContext';
 import AnonymousSignIn from "./AnonymousSignIn";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const SignUp = () => {
-    const pic2 = healthyrun;
+    const pic2 = healthyRun;
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
@@ -21,7 +23,8 @@ const SignUp = () => {
         setError("")
         try{
             await createUser(email, password)
-            navigate('/account')
+            navigate('/account');
+            console.log(createUser)
         } catch (e){
             setError(e.message)
         }
@@ -94,7 +97,7 @@ const SignUp = () => {
                     </div>
                 </div>
             </section>
-     </>
+        </>
     )
       
         

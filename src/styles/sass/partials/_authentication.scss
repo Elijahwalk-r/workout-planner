@@ -1,0 +1,33 @@
+@import './variablesMixins';
+
+/* #region SIGN IN/UP COMPONENT STYLES START */
+.signInCard {
+    @include authentication
+}
+
+.imageContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.backgroundImage {
+    position: absolute;
+    top: 500px;
+    z-index: -10;
+    width: auto;
+    max-width: 90%;
+}
+
+.ecgContainer {
+    max-width: 200px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.ecgSprint {
+    width: 100%;
+}
+
+/* #endregion SIGN IN/UP COMPONENT STYLES END*/

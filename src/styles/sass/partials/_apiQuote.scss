@@ -1,0 +1,9 @@
+@import './variablesMixins';
+
+.apiFlexParent{
+    @include contentBox;
+}
+
+.quotation{
+    color: gold;
+}

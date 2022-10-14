@@ -2,7 +2,7 @@ const Explanation = () => {
     return (
         <div className="descriptionFlexParent">
             <h2>Get Started</h2>
-            <p>Welcome to your new simple <span className="exclamation">Workout Planner</span>. Select an exercise from a muscle group below and add it to your Workout! Be sure to only execute <span className="exclamation">3-4 sets of 12 reps</span> for each exercise and enjoy!</p>
+            <p>Welcome to your new simple <span className="exclamation">Workout Planner</span>. Choose a name for you workout (ex. Upper Body), and then add any exercise you want to your Workout! (ex. Bench Press 3 x 4), <span className="exclamation">enjoy!</span></p>
         </div>
         
     )

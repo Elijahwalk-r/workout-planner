@@ -4,7 +4,6 @@ import Explanation from "./Explanation"
 import ApiData from './ApiData';
 import GetExercise from './GetExercise';
 import AddExercise from './AddExercise';
-import FormDropdown from './FormDropdown';
 import Footer from "./Footer";
 
 const MainContent = ({quote}) => {
@@ -19,9 +18,19 @@ const MainContent = ({quote}) => {
               <ApiData quote={quote}/>
             </div>
           </section>
-          <FormDropdown />
-          <AddExercise />
-          <GetExercise />
+
+          <section>
+            <div className="wrapper exerciseContainer">
+              <div>
+                <AddExercise />
+              </div>
+              <div className="workoutCard">
+                <ul>
+                  <GetExercise />
+                </ul>
+              </div>
+            </div>
+          </section>
         </main>
         <Footer />
         </>

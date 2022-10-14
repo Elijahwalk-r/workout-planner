@@ -1,0 +1,72 @@
+@import './variablesMixins';
+
+/* #region BASE STYLES START */
+.wrapper {
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+
+section { margin-bottom: 50px; }
+
+main { margin-top: 50px; }
+/* #endregion BASE STYLES END */
+
+// #region COLOR SCHEMES
+body{
+    background-color: $primary;
+    color: #f0ebd8;
+}
+
+.headerContainer{
+    background-color: $tertiary;
+    box-shadow: $quinary 0px -50px 36px -28px inset;
+}
+
+button {
+    background-color:$quaternary;
+    color: black;
+}
+
+button:hover,
+:focus {
+    background-color: #0D1321;
+    color: white;
+    border: 1px solid gold;
+}
+
+input:hover,
+:focus {
+    background-color: white;
+    border: none;
+    color: black;
+}
+
+.signInCard{
+    border: 1px solid $primary;
+    background-color: $secondary;
+}
+
+.footerLink,
+.exclamation,
+.removeButton { color: gold; }
+
+.footerLink:hover,
+:focus {
+    color: goldenrod;
+    text-decoration: underline;
+}
+
+.workoutCard{
+    background-color: $secondary;
+    box-shadow: -10px 10px 15px $quaternary;
+}
+// #endregion COLOR SCHEMES

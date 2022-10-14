@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const ApiData = () => {
-     const [quote, setQuote] = useState([])
+  // state hook to hold changing quote
+  const [quote, setQuote] = useState([])
+
+  // use effect with dependency array for call to be made once on component mount getting API data with axios
   useEffect(() => {
     axios({
       url: "https://api.goprogram.ai/inspiration",

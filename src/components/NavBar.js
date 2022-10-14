@@ -3,51 +3,59 @@ import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../contexts/AuthContext";
 
 const NavBar = () => {
+
+    // global variables grabbing user info and logout method from context as well as navigating user to a different page through react router
      const { user, logOut} = UserAuth(); 
      const navigate = useNavigate();
     
+    //  named function to handle log out, and display user's email / or display anonymous user
      const checkUser = () => {
         const handleLogOut = async (e) => {
             e.preventDefault();
             try{
                 await logOut();
                 navigate("/");
-                console.log("You are logged out")
             } catch(e){
-                console.log(e.message)
+                alert(e.message)
             }
         }
-
-        if (!!user) {
+        
+        // checks is user.email is null to conditionally render a different nav based on if user authentication is anonymous or email/password verified
+        if (user.email !== null) {
             return(
                 <>
-                    <p>Current User: {user && user.email}</p>
-                    <button onClick={handleLogOut}>Log Out</button>
+                    
+                    <p className="linkToAccount"> <Link to="/account">View Private Account</Link></p>
+
+                    <p className="currentUser">
+                        <span>Current User </span> 
+                        <span>{user && user.email}</span>
+                    </p>
+                            
+                    <button className="mainLogOut" type="submit" onClick={handleLogOut}>Log Out</button>
+                    
                 </>
             )
         } else {
             return(
                 <>
-                <button> <Link to="/">Log In</Link> </button>
+
+                    <p className="linkToAccount"> <Link to="/public">View Public Workouts</Link></p>
+                    
+                    <p className="currentUser">Anonymous User</p>
+                    
+                    <button className="mainLogOut" type="submit" onClick={handleLogOut}>Log Out</button>
                 </>
             )
         }
      }
-
-
-     
-
     
     return(
         <nav>
             <div className="wrapper navBarContainer">
                 <ul className="navBarUl">
                     <li className="navList">
-                       <p className="linkToAccount"> <Link to="/account">View Your Private Account</Link></p>
-                    </li>
-                    <li className="navList">
-                         {checkUser()}
-                          
+                         {checkUser()} 
                     </li>
                 </ul>
             </div>

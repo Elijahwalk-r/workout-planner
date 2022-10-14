@@ -3,29 +3,25 @@ import { signInAnonymously } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
 
-
-
 const AnonymousSignIn = () => {
+
+    // variable for react router navigation
     const navigate = useNavigate();
-    
+
+    // async function to auth user with anonymous sign in through firebase
     const anonLogIn = async () => {
         signInAnonymously(auth)
         .then(() => {
-            navigate("/public")
-            console.log("signed in anon")
+            navigate("/public");
         })
          .catch ((e) => {
-            const errorCode = e.code 
-            const errorMessage = e.message 
+            // console.log(e.code);
+            alert(e.message);
         })  
     }
-
     return(
         <button onClick={anonLogIn}>Continue Anonymously</button>
-    )
-    
-    
-        
+    )     
 }
 
-export default AnonymousSignIn
+export default AnonymousSignIn;

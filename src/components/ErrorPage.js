@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 const ErrorPage = () => {
     return(
         <div className="wrapper">
@@ -8,7 +9,6 @@ const ErrorPage = () => {
 
             <p>Click <Link to="/">HERE</Link> to go to the Log in page</p>
 
-            <p>Click <Link to="main">HERE</Link> to build a workout anonymously</p>
         </div>
     )
 

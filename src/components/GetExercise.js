@@ -1,24 +1,20 @@
 import { useEffect, useState } from 'react';
 import { getDatabase, ref, onValue, remove } from 'firebase/database';
 import firebase from '../firebase';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { getAuth } from "firebase/auth";
+
 
 const GetExercise = () => {
-    const auth = getAuth();
 
-    onAuthStateChanged(auth, (user) => {
-        if (user){
-            const uid = user.uid;
-            console.log("hey")
-        } else {
-            console.log("bye")
-        }
-    })
+    // global variables to get database and get signed in users
+    const userAuth = getAuth();
+    const user = userAuth.currentUser;
+    const uid = user.uid
 
     const [exercise, setExercise] = useState([]);
     useEffect(() => {
         const database = getDatabase(firebase);
-        const dbRef = ref(database);
+        const dbRef = ref(database,`/${uid}`);
         onValue(dbRef, (res) => {
             const newArray = [];
             const data = res.val();
@@ -29,26 +25,29 @@ const GetExercise = () => {
         })
     }, [])
 
-    const handleRemoveExercise = (liftId) => {
+    const handleRemoveExercise = () => {
         const database = getDatabase(firebase)
-        const dbRef = ref(database, `/${liftId}`)
+        const dbRef = ref(database, `/${uid}`)
         remove(dbRef)
     }
     return(
-        <section>
-            <div className="wrapper">
-                <ul>
+                <>
                     {exercise.map((lift) => {
                         return(
                             <li className="liftListItem" key={lift.key}>
+
                                 <p>{lift.name}</p>
-                                <button className="removeButton" onClick={() => handleRemoveExercise(lift.key)}>X</button>
+
+                                <button 
+                                    className="removeButton" 
+                                    onClick={() => handleRemoveExercise(lift.key)}
+                                    >X
+                                </button>
+
                             </li>
                         )
                     })}
-                </ul>
-            </div>
-        </section>
+                </>
     )
 }
 

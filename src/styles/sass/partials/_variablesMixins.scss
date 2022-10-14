@@ -1,0 +1,47 @@
+// #region COLOR Variables
+$primary: #0D1321;
+$secondary: #3e5c76;
+$tertiary: #1D2D44;
+$quaternary:#748cab;
+$quinary: #3e5c76;
+// #endregion COLORS Variables
+
+// #region AUTHENTICATION Mixins
+@mixin authentication {
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 25px;
+    max-width: 700px;
+}
+
+@mixin navLinks {
+    margin-right: 15px;
+    padding: 10px;
+    background-color: $quaternary;
+    color: black;
+    border-radius: 40px;
+    text-align: center;
+    
+    a {
+        color: black;
+    }
+}
+
+@mixin logOutButton{
+    height: 3rem;
+    margin-left: 15px;
+    border-radius: 40px;
+    text-align: center;
+}
+
+@mixin contentBox{
+    border: 1px solid black;
+    width: 45%;
+    text-align: center;
+    border-radius: 91% 9% 82% 18% / 13% 70% 30% 87%;
+    padding: 20px;
+    background-color: $quinary;
+}
+// #endregion AUTHENTICATION Mixins

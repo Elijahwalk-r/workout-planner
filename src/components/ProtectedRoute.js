@@ -5,6 +5,7 @@ import { UserAuth } from "../contexts/AuthContext";
 const ProtectedRoute = ({ children }) => {
     const {user} = UserAuth();
 
+    // checks if there is an authenticated user before navigating to account page
     if (!user){
         return <Navigate to="/" />
     }

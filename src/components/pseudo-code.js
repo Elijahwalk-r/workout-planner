@@ -11,13 +11,13 @@
 
         //APP PSEUDO CODE START
 // exercises component//
-// Create data of exercises a user will see on page load
+// Create option for user to name their workout and push their uid and named workout to firebase
 
 // useEffect to hold it all 
 // bring exercises from firebase into an li through a form input USING A STATE METHOD & getDataBase
 
 // usestate method
-// user can select exercise from the drop down, type in the exercise of their choice in form and it will return on page (handle change method)
+// user can type in the exercise of their choice in form and it will return on page (handle change method)
 
 //submit,push method
 //and click an add button, that will add that exercises and display it into a ul li

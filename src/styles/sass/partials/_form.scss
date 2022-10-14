@@ -1,0 +1,79 @@
+/* #region FORM / INPUT STYLES START */
+form {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+}
+
+label{
+    text-align: center;
+}
+
+.signIn {
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.signInButton {
+    border-radius: 10px;
+    height: 50px;
+}
+
+.anonymous::before,
+.anonymous::after {
+    content: " | ";
+}
+
+/* #endregion FORM / INPUT STYLES END */
+
+/* #region SELECT FORM STYLES START */
+.exerciseFormDropdown {
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.formFlexChild1,
+.formFlexChild2,
+.formFlexChild3,
+.formFlexChild4 {
+    margin: 0px 40px;
+    width: calc((100% / 4) - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.exerciseLabel {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+
+}
+
+option {
+    padding: 10px;
+}
+
+.exerciseTitle {
+    text-align: center;
+}
+
+/* #endregion SELECT FORM STYLES END */

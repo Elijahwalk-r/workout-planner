@@ -1,0 +1,11 @@
+@import './variablesMixins';
+
+.descriptionSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.descriptionFlexParent{
+    @include contentBox;
+}
