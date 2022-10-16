@@ -13,15 +13,19 @@ View live site [here](https://workout-planner-main.netlify.app/).
 
 - React (useState, useEffect, props, components)
 - Firebase (Realtime Database, getDatabase, ref, onValue, push, remove)
-- RESTful API (Data drawn with Axios from Inspiration API)
-- HTML / CSS
+- RESTful API (Data drawn with Axios)
+    - Inspiration API (quotes) 
+    - PurgoMalum API (profanity filter)
+- HTML / CSS / SCSS(SASS)
 - Netlify (app built for production with npm run build)
+
 
 ## Possible Improvements
 
-- Include an API to check for profanity filtering
 - User Authentication from firebase
+    - email/password & anonymous auth, saving unique ID as parent node for  workouts
 - Ability to save workouts for later use
-- Populating dropdown with data consisting of a large range of exercises
+    - Using React Router to show saved works on a public/private "account page"
+- Populating dropdown with data consisting of a large range of exercises and pagination
 
 

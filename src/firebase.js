@@ -1,22 +1,20 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAnalytics } from "firebase/analytics";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyBiO-kMp9lx3zIcPwWcWmXLMVrU0qvYVhQ",
-    authDomain: "my-workout-planner-45666.firebaseapp.com",
-    databaseURL: "https://my-workout-planner-45666-default-rtdb.firebaseio.com",
-    projectId: "my-workout-planner-45666",
-    storageBucket: "my-workout-planner-45666.appspot.com",
-    messagingSenderId: "701081077636",
-    appId: "1:701081077636:web:55f182325a1bc1d7d1ffd1",
-    measurementId: "G-X7T83LJ274"
+  apiKey: "AIzaSyBOlyviIrhjsVYM2XbFntZqD4phiF_eK9I",
+  authDomain: "workoutplannerproduction.firebaseapp.com",
+  databaseURL: "https://workoutplannerproduction-default-rtdb.firebaseio.com",
+  projectId: "workoutplannerproduction",
+  storageBucket: "workoutplannerproduction.appspot.com",
+  messagingSenderId: "1035985046140",
+  appId: "1:1035985046140:web:53db335110c1c4165917f9",
+  measurementId: "G-EFM3YT81ZM"
 };
 
 // Initialize Firebase
-const firebase = initializeApp(firebaseConfig);
 
-export default firebase; 
+const firebase = initializeApp(firebaseConfig);
+const analytics = getAnalytics(firebase);
+
+export default firebase;
