@@ -3,7 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import LogOut from "./LogOut";
-import GetWorkoutSavedList from "./GetWorkoutSavedList";
+// import GetWorkoutSavedList from "./GetWorkoutSavedList";
 
 const PublicPage = () => {
     // use of states to toggle between classes and element text
@@ -70,7 +70,7 @@ const PublicPage = () => {
                         <a>go to random youtube vid</a>
                         
                         <ul className={toggleExerciseClass}>
-                            <GetWorkoutSavedList/>
+                            {/* <GetWorkoutSavedList/> */}
                         </ul>
                     </div>
                 </div>

@@ -58,6 +58,7 @@ const SignIn = () => {
                                     onChange={(e) => setEmail(e.target.value)}
                                     placeholder="Enter Your Email"
                                     className="signIn"
+                                    required={true}
                                 />
 
                                 <label 
@@ -70,6 +71,7 @@ const SignIn = () => {
                                     onChange={(e) => setPassword(e.target.value)} 
                                     placeholder="Password"
                                     className="signIn"
+                                    required={true}
                                 />
 
                                 <button type="submit" className="signInButton">Sign In</button>

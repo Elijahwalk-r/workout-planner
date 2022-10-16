@@ -27,11 +27,8 @@ const GetWorkoutSavedList = () => {
                     </li>
                 )
             })}
-        </>
-       
+        </> 
     )
-
-    }
-
+}
 
 export default GetWorkoutSavedList;

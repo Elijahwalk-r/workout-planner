@@ -2,7 +2,7 @@ import NavBar from "./NavBar";
 import Header from "./Header";
 import Explanation from "./Explanation"
 import ApiData from './ApiData';
-import GetExercise from './GetExercise';
+// import GetExercise from './GetExercise';
 import AddExercise from './AddExercise';
 import Footer from "./Footer";
 
@@ -26,7 +26,7 @@ const MainContent = ({quote}) => {
               </div>
               <div className="workoutCard">
                 <ul>
-                  <GetExercise />
+                  {/* <GetExercise /> */}
                 </ul>
               </div>
             </div>

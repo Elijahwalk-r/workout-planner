@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { getDatabase, push, ref, set} from 'firebase/database';
+import { getDatabase, push, ref, set, update} from 'firebase/database';
 import { getAuth } from "firebase/auth";
+import { Link } from "react-router-dom";
 
 const AddExercise = () => {
     
@@ -18,8 +19,7 @@ const AddExercise = () => {
 
     // named function to write to firebase RTDB based on state, then resetting state to an empty string
     const writeToDatabase = () => {
-        set(ref(db, `/${uid}`), {
-            name: workoutName,
+        set(ref(db, `/${uid}/${workoutName}`), {
             uid: uid
         });
         setWorkoutName("")
@@ -34,34 +34,67 @@ const AddExercise = () => {
     // submitting the specific exercises to the unique users id
     const handleSubmit = (e) => {
         e.preventDefault();
-        const dbRef = ref(db, `/${uid}`);
-        push(dbRef, userInput);
+        const dbRef = ref(db, `/${uid}/${workoutName}`);
+        
+        const newPostRef = push(dbRef);
+        update(newPostRef, userInput)
         setUserInput("");
     }
 
+    // checking if their is a user before rendering the named workout Card
+    const namedWorkoutCard = () => {
+        if (user !== null){
+            return(
+                <>
+                    <form action="submit">
+                        <label htmlFor="workoutTitle">Workout Focus</label>
+
+                        <input 
+                            type="text" 
+                            id="workoutTitle" 
+                            value={workoutName} 
+                            placeholder="eg. Upper Body"
+                            maxLength="23"
+                            name="workoutTitle"
+                            className="addWorkoutTitle"
+                            required={true}
+                            onChange={handleSetWorkoutName} />
+
+                        <button onClick={writeToDatabase} type="submit">Add Name</button>
+                    </form>
+
+                    <form action="submit" className="addLiftForm">
+
+                        <label htmlFor="exerciseChosen">Add an exercise to create your Workout</label>
+
+                        <input 
+                            type="text" 
+                            id="exerciseChosen" 
+                            onChange={handleInputChange} 
+                            value={userInput} 
+                            className="addLiftInput" 
+                            name="exercise" 
+                            placeholder="Enter Your Exercise" 
+                            maxLength="24" 
+                            required={true}
+                            />    
+
+                        <button type="submit" onClick={handleSubmit}>Choose an Exercise</button>
+
+                    </form>
+                </>
+            )
+        } else {
+            return(
+                <p>You have been signed out, click here to sign back in <Link to="/">HERE</Link></p>
+            )
+        }
+    }
 
 return(
-    <form action="submit" className="addLiftForm">
-
-        <label>Workout Focus</label>
-        <input type="text" value={workoutName} onChange={handleSetWorkoutName} />
-        <button onClick={writeToDatabase} type="submit">Add Name</button>
-
-        <label htmlFor="exerciseChosen">Add an exercise to create your Workout</label>
-        <input 
-            type="text" 
-            id="exerciseChosen" 
-            onChange={handleInputChange} 
-            value={userInput} 
-            className="addLiftInput" 
-            name="exercise" 
-            placeholder="Enter Your Exercise" 
-            maxLength="24" 
-            required={true}
-        />         
-        <button onClick={handleSubmit}>Choose an Exercise</button>
-
-    </form>
+    <>
+        {namedWorkoutCard()}
+    </>
 
 )
 }
