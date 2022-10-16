@@ -1,0 +1,11 @@
+@use './partials/setUp';
+@use './partials/variablesMixins';
+@use './partials/baseStyles';
+@use './partials/typography';
+@use './partials/mediaQueries';
+@use './partials/header.scss';
+@use './partials/explanation';
+@use './partials/apiQuote';
+@use './partials/addExercise';
+@use './partials/getExercise';
+@use './partials/footer';

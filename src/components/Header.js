@@ -1,9 +1,9 @@
 const Header = () => {
     return(
-        <header>
-            <div className="wrapper">
+        <header className="mainHeader">
+            <div className="wrapper headerContainer">
                 <h1>Workout Planner</h1>
-                <p>Get Fit with <span className="exclamation">Quick</span> and <span className="exclamation">Easy</span> Exercises
+                <p className="headerParagraph">Get Fit with <span className="exclamation lineBreak">Quick</span> and <span className="exclamation">Easy</span> Exercises
                 </p>
             </div>
         </header>

@@ -1,0 +1,34 @@
+/* #region GET EXERCISE STYLES START */
+.workoutCard {
+    margin: 0 auto;
+    width: 60%;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 91% 9% 88% 12% / 9% 88% 12% 91%;
+    margin-top: 20px;
+
+    ul {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.liftListItem {
+    width: calc(100% / 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.removeButton {
+    padding: 0;
+    height: fit-content;
+    margin-left: 10px;
+    border: none;
+    background-color: unset;
+}
+
+/* #endregion GET EXERCISE STYLES END */
